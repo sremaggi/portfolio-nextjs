@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
+//Navbar app
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 

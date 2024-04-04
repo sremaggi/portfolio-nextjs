@@ -11,6 +11,15 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+          'dark-gradient': 'linear-gradient(to bottom, rgb(58, 58, 60), rgb(99, 99, 102))',
+
+          
+      },
+      backgroundColor:{
+        'custom-gray': '#636363',
+      },
+      fontFamily: {
+        'roboto': ['Roboto', 'sans-serif'], // Añade 'roboto' como una clave para tu fuente personalizada
       },
     },
   },

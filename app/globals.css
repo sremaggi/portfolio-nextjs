@@ -1,33 +1,83 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400..900&display=swap');
+
+
+
+
+
+
+
+
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 255, 255, 255; /* Texto en blanco para contraste */
+  --background-start-rgb: 58, 58, 60; /* Gris oscuro para el inicio del degradado */
+  --background-end-rgb: 99, 99, 102; /* Gris más claro para el final del degradado */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 255, 255, 255; /* Texto en blanco, adecuado para el modo oscuro */
+    --background-start-rgb: 33, 33, 35; /* Un gris aún más oscuro para el inicio del degradado en modo oscuro */
+    --background-end-rgb: 66, 66, 69; /* Un gris medio para el final del degradado en modo oscuro */
   }
+}
+
+html, body {
+  min-height: 100vh; /* Hace que al menos tengan la altura de la ventana del navegador */
+  margin: 0; /* Elimina los márgenes predeterminados */
+  padding: 0; /* Elimina los paddings predeterminados */
+
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
+  background-attachment: fixed; /* Asegura que el fondo sea fijo y no se repita con el contenido */
 }
+
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-background {
+  background: linear-gradient(-45deg, #000000, #2A2A2A, #323232, #000000);
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s ease infinite;
+  /* Asegúrate de que el div tenga un alto establecido para que el fondo sea visible */
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+
+
+.f1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+
+

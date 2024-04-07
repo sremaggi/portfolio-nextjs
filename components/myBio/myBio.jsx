@@ -6,7 +6,7 @@ export default function MyBio() {
       <div className=" p-8 rounded-lg  pt-2">
         <div className="flex justify-center items-center mb-4 mt-2">
           <div
-            className="w-36 h-36 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 bg-cover bg-center rounded-full"
+            className="w-28 h-28 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 bg-cover bg-center rounded-full"
             style={{
               backgroundImage: `url('/assets/logo/sremaggilogo.gif')`,
             }}

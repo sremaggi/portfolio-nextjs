@@ -1,30 +1,31 @@
-// Suponiendo que MyApp sea tu componente de layout y MyCareer sea una página.
 import Footer from "@/components/footer/footer";
 import experiences from "@/data/experiences";
 
 const MyCareer = () => (
   <>
-  <div className="flex flex-col min-h-screen">
-
-        <div className="px-4">
-        <h1 className="text-2xl md:text-4xl text-center font-bold mb-12">My Professional Career</h1>
-        <div className="max-w-4xl mx-auto">
+    <div className="flex flex-col min-h-screen ">
+      <div className="flex-grow mb-20 lg:mb-44">
+        <h1 className="text-2xl md:text-4xl text-center font-bold my-5">
+          My Professional Career
+        </h1>
+        <div className="space-y-1 max-w-4xl mx-auto p-4">
           {experiences.map((exp, index) => (
-            <div key={index} className="mb-2 flex items-start">
-              <div className="mr-4 flex-shrink-0 text-violet-400">
-                <exp.Icon className="h-8 w-8" />
-              </div>
-              <div>
-                <div className="text-lg text-gray-400">{exp.year}</div>
-                <div className="text-xl font-semibold">{exp.title}</div>
-                <p className="text-gray-400 mt-2">{exp.description}</p>
+            <div key={index} className="bg-white bg-opacity-5 p-6 rounded-lg shadow-lg transition-all hover:shadow-2xl">
+              <div className="flex items-center space-x-4">
+                <div className="text-orange-500">
+                  <exp.Icon className="h-12 w-12" />
+                </div>
+                <div>
+                  <div className="text-xs md:text-lg text-gray-300">{exp.year}</div>
+                  <div className="text-sm md:text-xl font-semibold">{exp.title}</div>
+                  <p className="text-xs md:text-lg text-gray-300 mt-2">{exp.description}</p>
+                </div>
               </div>
             </div>
           ))}
         </div>
-        </div>
+      </div>
       <Footer />
-
     </div>
   </>
 );

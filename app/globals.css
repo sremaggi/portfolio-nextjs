@@ -20,7 +20,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255; /* Texto en blanco, adecuado para el modo oscuro */
-    --background-start-rgb: 33, 33, 35; /* Un gris aún más oscuro para el inicio del degradado en modo oscuro */
+
     --background-end-rgb: 66, 66, 69; /* Un gris medio para el final del degradado en modo oscuro */
   }
 }
@@ -34,8 +34,16 @@ html, body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
-  background-attachment: fixed; /* Asegura que el fondo sea fijo y no se repita con el contenido */
+  background: linear-gradient(-45deg, #000000, #1F2937, #1F2937, #000000);
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s ease infinite;
+  /* Asegúrate de que el div tenga un alto establecido para que el fondo sea visible */
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 
@@ -57,8 +65,10 @@ body {
   }
 }
 
-.animated-background {
-  background: linear-gradient(-45deg, #000000, #2A2A2A, #323232, #000000);
+
+
+.animated-background2 {
+  background: linear-gradient(-45deg, #000000, #1F2937, #1F2937, #000000);
   background-size: 400% 400%;
   animation: gradientAnimation 20s ease infinite;
   /* Asegúrate de que el div tenga un alto establecido para que el fondo sea visible */
@@ -71,13 +81,19 @@ body {
 }
 
 
-
 .f1 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 100;
   font-style: normal;
 }
 
+/* Estilos personalizados para Swiper con Tailwind CSS */
+.swiper-button-next, .swiper-button-prev {
+
+  @apply text-white; /* Texto blanco */
+  @apply p-2; /* Padding */
+  @apply rounded; /* Bordes redondeados */
+}
 
 
 

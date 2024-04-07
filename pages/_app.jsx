@@ -1,14 +1,21 @@
+"use client"
+import Navbar from "@/components/navbar/navbar";
 import "../app/globals.css";
-import dynamic from 'next/dynamic';
+import Footer from "@/components/footer/footer";
 
-// Importa el Navbar como un componente del cliente
-const Navbar = dynamic(() => import('../components/navbar/navbar'), { ssr: false });
+
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Navbar />
+    <div className="min-h-screen">
+    <Navbar/>
+    <div  className="animated-background2"></div> {/* Fondo animado */}
+
       <Component {...pageProps} />
+      <Footer/>
+      </div>
+   
     </>
   );
 }

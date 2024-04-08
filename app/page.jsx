@@ -8,17 +8,14 @@ import TechnologyCarousel from "@/components/technologyCarousel/technologyCarous
 export default function Home() {
   return (
     <div className="min-h-screen">
-     {/* <div className="animated-background2"></div>  Fondo animado */}
       <Navbar />
-      <div >
-
+      <div>
         {/* Sección de Mini Bio */}
-        <div className="mt-10">
-        <MyBio />
+        <div className="mt-20">
+          <MyBio />
         </div>
         {/* Carrusel */}
         <TechnologyCarousel />
-   
       </div>
       <Footer />
     </div>

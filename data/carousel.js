@@ -1,4 +1,4 @@
-import { DiJavascript1, DiReact, DiDocker, DiGo, DiGit, DiJava, DiPython, DiAngularSimple } from 'react-icons/di';
+import { DiJavascript1, DiReact, DiDocker, DiGo, DiGit, DiJava, DiPython, DiAngularSimple, DiAws } from 'react-icons/di';
 import { FaAws, FaGoogle } from 'react-icons/fa';
 
 const technologies = [

@@ -22,12 +22,12 @@ const Footer = () => {
         >
           <FaLinkedinIn size={24} />
         </a>
-        <a href="https://wa.me/YOURNUMBER" className="mx-2" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/+56986021478" className="mx-2" target="_blank" rel="noopener noreferrer">
           <FaWhatsapp size={24} />
         </a>
       </div>
       <p className="mt-1">
-        <a href="mailto:seba.rf96@gmail.com" className="text-sm font-light opacity-80 hover:opacity-100 transition-opacity duration-300 f1">
+        <a className="text-sm font-light opacity-80 hover:opacity-100 transition-opacity duration-300 text-gray-300 f1">
           contact@sremaggi.dev
         </a>
       </p>

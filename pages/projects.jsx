@@ -1,8 +1,7 @@
 import React from "react";
 import MyTitle from "@/components/myTitle";
 import projects from "@/data/projects";
-// Importa el ícono que deseas usar
-import { FaAngleDoubleRight } from "react-icons/fa";
+
 
 const Projects = () => {
   return (

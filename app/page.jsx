@@ -15,7 +15,10 @@ export default function Home() {
           <MyBio />
         </div>
         {/* Carrusel */}
+        <div className="px-10 lg:px-60 xl:px-96">
         <TechnologyCarousel />
+        </div>
+
       </div>
       <Footer />
     </div>

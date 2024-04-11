@@ -3,14 +3,6 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400..900&display=swap');
 
-
-
-
-
-
-
-
-
 :root {
   --foreground-rgb: 255, 255, 255; /* Texto en blanco para contraste */
   --background-start-rgb: 58, 58, 60; /* Gris oscuro para el inicio del degradado */
@@ -91,8 +83,53 @@ body {
 .swiper-button-next, .swiper-button-prev {
 
   @apply text-white; /* Texto blanco */
-  @apply p-2; /* Padding */
+  @apply p-1; /* Padding */
   @apply rounded; /* Bordes redondeados */
+}
+
+/* Estilos básicos para el carrusel */
+.carousel-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel-content {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  flex: 0 0 20%; /* Por defecto, muestra 5 elementos (100% / 5) */
+  opacity: 1; /* Asegurarse de que sea visible por defecto */
+  transition: opacity 0.5s ease;
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .carousel-item {
+    flex: 0 0 33.33%; /* Muestra 3 elementos (100% / 3) */
+  }
+}
+
+/* Estilos para los botones de navegación */
+.carousel-nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel-prev, .carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-prev {
+  left: 0;
+}
+
+.carousel-next {
+  right: 0;
 }
 
 

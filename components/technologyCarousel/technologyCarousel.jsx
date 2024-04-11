@@ -1,25 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from "react";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
-
-import technologies from '@/data/carousel';
-
-const useWindowSize = () => {
-  const [size, setSize] = useState([0, 0]);
-  useEffect(() => {
-    const updateSize = () => {
-      setSize([window.innerWidth, window.innerHeight]);
-    };
-    window.addEventListener('resize', updateSize);
-    updateSize();
-    return () => window.removeEventListener('resize', updateSize);
-  }, []);
-  return size;
-};
+import technologies from "@/data/carousel";
 
 const TechnologyCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerView = window.innerWidth > 768 ? 5:3; // Mantener siempre 5 elementos visibles
-  const visibleTechnologies = technologies.slice(currentIndex, currentIndex + itemsPerView).concat(technologies.slice(0, Math.max(itemsPerView - (technologies.length - currentIndex), 0)));
+
+  // Calcula los elementos visibles basados en currentIndex
+  // Asumiendo que quieres circular a través de todas tus tecnologías.
+  const visibleTechnologies = technologies
+    .slice(currentIndex, currentIndex + 5)
+    .concat(
+      technologies.slice(
+        0,
+        Math.max(5 - (technologies.length - currentIndex), 0)
+      )
+    );
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
@@ -34,22 +29,25 @@ const TechnologyCarousel = () => {
   };
 
   return (
-    <div className="carousel-container relative flex items-center justify-center px-5 lg:px-40 xl:px-96">
-      <div className="absolute inset-y-0 flex items-center justify-between w-full px-1 lg:px-36 xl:px-80">
-        <button onClick={handlePrev} className="z-10 text-gray-500 text-2xl lg:text-3xl xl:text-4xl">
+    <div className="carousel-container relative flex items-center justify-center ">
+      <div className="carousel-nav absolute inset-y-0 flex items-center justify-between w-full">
+        <button onClick={handlePrev} className="carousel-prev z-10">
           <MdKeyboardArrowLeft size="2em" />
         </button>
-        <button onClick={handleNext} className="z-10 text-gray-500 text-2xl lg:text-3xl xl:text-4xl">
+        <button onClick={handleNext} className="carousel-next z-10">
           <MdKeyboardArrowRight size="2em" />
         </button>
       </div>
-      <div className="flex overflow-hidden justify-center w-full">
+      <div className="carousel-content flex overflow-hidden justify-center w-full ">
         {visibleTechnologies.map((tech, index) => (
-          <div key={index} className="flex flex-col items-center justify-center flex-none" style={{width: `${100/itemsPerView}%`}}>
-            <div className="text-5xl lg:text-7xl xl:text-8xl mb-1">
-              {tech.icon}
-            </div>
-            <p className="text-center text-sm lg:text-base text-gray-300">{tech.name}</p>
+          <div
+            key={index}
+            className="carousel-item flex flex-col items-center justify-center "
+          >
+            <div className="tech-icon text-4xl lg:text-7xl xl:text-8xl">{tech.icon}</div>
+            <p className="tech-name text-center text-sm lg:text-base text-gray-300">
+              {tech.name}
+            </p>
           </div>
         ))}
       </div>

@@ -1,5 +1,5 @@
 import { NavbarProvider } from '../contexts/NavbarContext'; // Asegúrate de que la ruta de importación sea correcta
-import Navbar from '@/components/navbar/Navbar';
+import Navbar from '@/components/navbar/navbar';
 import Footer from '@/components/footer/footer';
 import '../app/globals.css';
 

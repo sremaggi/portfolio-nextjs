@@ -1,23 +1,18 @@
-"use client"
-import Navbar from "@/components/navbar/navbar";
-import "../app/globals.css";
-import Footer from "@/components/footer/footer";
-
-
+import { NavbarProvider } from '../contexts/NavbarContext'; // Asegúrate de que la ruta de importación sea correcta
+import Navbar from '@/components/navbar/Navbar';
+import Footer from '@/components/footer/Footer';
+import '../app/globals.css';
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <>
-    <div className="min-h-screen">
-    <Navbar/>
-    <div  className="animated-background2"></div> {/* Fondo animado */}
-
-      <Component {...pageProps} />
-      <Footer/>
-      </div>
-   
-    </>
-  );
+    return (
+        <NavbarProvider> 
+            <div className="min-h-screen">
+                <Navbar />
+                <Component {...pageProps} />
+                <Footer />
+            </div>
+        </NavbarProvider>
+    );
 }
 
 export default MyApp;

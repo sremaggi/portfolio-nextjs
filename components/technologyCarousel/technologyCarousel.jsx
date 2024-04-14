@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import technologies from "@/data/carousel";
+import { useNavbar } from "@/contexts/NavbarContext";
 
 const TechnologyCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { isOpen } = useNavbar();
 
   // Calcula los elementos visibles basados en currentIndex
   // Asumiendo que quieres circular a través de todas tus tecnologías.
@@ -28,16 +30,20 @@ const TechnologyCarousel = () => {
     );
   };
 
+
+
   return (
     <div className="carousel-container relative flex items-center justify-center ">
-      <div className="carousel-nav absolute inset-y-0 flex items-center justify-between w-full">
+
+      {isOpen ? "" : <div className={`carousel-nav absolute inset-y-0 flex items-center justify-between w-full`}>
         <button onClick={handlePrev} className="carousel-prev z-10">
           <MdKeyboardArrowLeft size="2em" />
         </button>
         <button onClick={handleNext} className="carousel-next z-10">
           <MdKeyboardArrowRight size="2em" />
         </button>
-      </div>
+      </div>}
+
       <div className="carousel-content flex overflow-hidden justify-center w-full ">
         {visibleTechnologies.map((tech, index) => (
           <div
@@ -56,3 +62,4 @@ const TechnologyCarousel = () => {
 };
 
 export default TechnologyCarousel;
+

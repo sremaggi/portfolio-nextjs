@@ -4,9 +4,11 @@ import Footer from "@/components/footer/footer";
 import MyBio from "@/components/myBio/myBio";
 import Navbar from "@/components/navbar/navbar";
 import TechnologyCarousel from "@/components/technologyCarousel/technologyCarousel";
+import { NavbarProvider } from "@/contexts/NavbarContext";
 
 export default function Home() {
   return (
+    <NavbarProvider> 
     <div className="min-h-screen">
       <Navbar />
       <div>
@@ -22,5 +24,6 @@ export default function Home() {
       </div>
       <Footer />
     </div>
+    </NavbarProvider> 
   );
 }

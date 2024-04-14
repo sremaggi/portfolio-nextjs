@@ -1,18 +1,15 @@
-import { useState } from 'react';
 import Link from 'next/link';
+import { useNavbar } from '@/contexts/NavbarContext';
 
 //Navbar app
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
 
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-  };
+  const { isOpen, toggleNavbar } = useNavbar();
 
   return (
     <nav className=" text-white flex justify-between items-center p-4 relative">
       <Link href="/" className="text-xl md:text-3xl font-bold f1">SRF</Link>
-      <button onClick={handleClick} className="md:hidden z-20">
+      <button onClick={toggleNavbar} className="md:hidden z-20">
         {isOpen ? (
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         ) : (

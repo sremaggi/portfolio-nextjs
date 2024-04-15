@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 
 function AdminPanel() {
-
+  console.log("ENVV", process.env.BUCKET_NAME)
   const [projects, setProjects] = useState([]);
   const [selectedProjectId, setSelectedProjectId] = useState('');
   const [project, setProject] = useState({

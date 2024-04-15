@@ -1,0 +1,19 @@
+[
+    {
+      "id": 1,
+      "title": "Primera Vista Hospedaje",
+      "description": "A project created with react js, the main objective was to provide a system for a lodging business with a daily fee, in which users can generate a reservation request with all the necessary information and with an attractive user interface.",
+      "technologies": ["react", "nodejs", "google", "database"],
+      "year": "2022 - Present",
+      "demoUrl": "https://primeravista-50b01.web.app/"
+    },
+    {
+      "id": 2,
+      "title": "Test",
+      "description": "A test project",
+      "technologies": ["react", "nodejs", "google", "database", "nodejs", "google", "database"],
+      "year": "2022 - Present",
+      "demoUrl": "https://primeravista-50b01.web.app/"
+    }
+  ]
+  

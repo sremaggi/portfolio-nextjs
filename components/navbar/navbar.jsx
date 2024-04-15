@@ -24,6 +24,9 @@ const Navbar = () => {
         <Link href="/projects">
           <p className="block mt-4 md:inline-block md:mt-0 md:ml-6 hover:text-gray-300 px-4 py-2">Projects</p>
         </Link>
+        <Link href="/admin">
+          <p className="block mt-4 md:inline-block md:mt-0 md:ml-6 hover:text-gray-300 px-4 py-2">Admin</p>
+        </Link>
         <a
         href="https://drive.google.com/uc?export=download&id=1jcOMuaiN6ej4_MpThs1heraQgjxeSOZb"
         className="block mt-4 md:inline-block md:mt-0 md:ml-6 bg-orange-800 hover:text-gray-300 px-4 py-2  text-white font-bold py-2 px-4 rounded min-w-[140px]  f1"

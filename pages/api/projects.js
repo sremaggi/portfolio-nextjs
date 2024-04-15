@@ -1,5 +1,5 @@
 import { Storage } from '@google-cloud/storage';
-
+require('dotenv').config();
 const storage = new Storage();
 const bucketName = process.env.BUCKET_NAME;
 const fileName = 'data/projects.json';

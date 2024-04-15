@@ -18,10 +18,7 @@ jobs:
         node-version: '18'
     - name: Use BUCKET_NAME
       run: |
-        echo "Using bucket: ${{ secrets.BUCKET_NAME }}"
-    - name: Use NEXT_PUBLIC_BASE_URL
-      run: |
-        echo "Using bucket: ${{ secrets.NEXT_PUBLIC_BASE_URL }}"    
+        echo "Using bucket: ${{ env.BUCKET_NAME }}"
     - name: Set up Cloud SDK
       uses: google-github-actions/setup-gcloud@v0.2.0
       with:

@@ -1,7 +1,8 @@
 import { Storage } from '@google-cloud/storage';
-require('dotenv').config();
+
 const storage = new Storage();
-const bucketName = 'portfolio-419922.appspot.com'; 
+const bucketName = process.env.BUCKET_NAME;
+
 const fileName = 'data/projects.json'; 
 const bucket = storage.bucket(bucketName);
 const file = bucket.file(fileName);

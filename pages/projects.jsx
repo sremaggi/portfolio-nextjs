@@ -1,9 +1,11 @@
 import MyTitle from '@/components/myTitle';
 import { Storage } from '@google-cloud/storage';
 
+
 export async function getStaticProps() {
+
   const storage = new Storage();
-  const bucketName = 'portfolio-419922.appspot.com';  // Reemplaza con el nombre de tu bucket
+  const bucketName = process.env.BUCKET_NAME; // Reemplaza con el nombre de tu bucket
   const fileName = 'data/projects.json';  // Asegúrate de que la ruta al archivo es correcta
 
   try {
@@ -29,6 +31,7 @@ export async function getStaticProps() {
 }
 
 export default function Projects({ projects }) {
+
   return (
     <div className="flex flex-col min-h-screen px-4 md:px-20">
       <MyTitle>My Projects</MyTitle>

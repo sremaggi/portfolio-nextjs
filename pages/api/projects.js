@@ -1,7 +1,7 @@
 import { Storage } from '@google-cloud/storage';
 
 const storage = new Storage();
-const bucketName = process.env.GCLOUD_STORAGE_BUCKET;
+const bucketName = process.env.GCP_STORAGE_BUCKET;
 
 const fileName = 'data/projects.json'; 
 const bucket = storage.bucket(bucketName);

@@ -25,4 +25,4 @@ jobs:
     - name: Deploy to App Engine
       run: gcloud app deploy --project ${{ secrets.GCP_PROJECT_ID }}
       env:
-        GCLOUD_STORAGE_BUCKET: ${{ secrets.GCLOUD_STORAGE_BUCKET }}
+        GCLOUD_STORAGE_BUCKET: ${{ secrets.GCP_STORAGE_BUCKET }}

@@ -1,9 +1,7 @@
 runtime: nodejs18
 
-env: 
-  NODE_ENV: 'production'
-  GCLOUD_STORAGE_BUCKET: ${GCLOUD_STORAGE_BUCKET}
-  
+env: standard
+
 instance_class: F1
 
 automatic_scaling:

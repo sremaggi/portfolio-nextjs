@@ -1,11 +1,8 @@
-import { Storage } from '@google-cloud/storage';
-
 const storage = new Storage();
-const bucketName = process.env.GCP_STORAGE_BUCKET;
+const bucketName = process.env.GCP_STORAGE_BUCKET || `${process.env.GCP_PROJECT_ID}.appspot.com`;  // Utilizando una variable de entorno o un valor predeterminado
 
-const fileName = 'data/projects.json'; 
 const bucket = storage.bucket(bucketName);
-const file = bucket.file(fileName);
+const file = bucket.file('data/projects.json');
 
 async function getProjects() {
   const [contents] = await file.download();

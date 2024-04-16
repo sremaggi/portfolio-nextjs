@@ -5,7 +5,7 @@ import { Storage } from '@google-cloud/storage';
 export async function getStaticProps() {
 
   const storage = new Storage();
-  const bucketName = process.env.GCP_STORAGE_BUCKET; // Reemplaza con el nombre de tu bucket
+  const bucketName = process.env.GCP_STORAGE_BUCKET || `${process.env.GCP_PROJECT_ID}.appspot.com`; // Reemplaza con el nombre de tu bucket
   const fileName = 'data/projects.json';  // Asegúrate de que la ruta al archivo es correcta
 
   try {

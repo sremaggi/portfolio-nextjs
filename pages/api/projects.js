@@ -1,5 +1,5 @@
 const storage = new Storage();
-const bucketName = process.env.GCP_STORAGE_BUCKET || `${process.env.GCP_PROJECT_ID}.appspot.com`;  // Utilizando una variable de entorno o un valor predeterminado
+const bucketName = process.env.GCP_STORAGE_BUCKET || `portfolio-419922.appspot.com`;  // Utilizando una variable de entorno o un valor predeterminado
 
 const bucket = storage.bucket(bucketName);
 const file = bucket.file('data/projects.json');

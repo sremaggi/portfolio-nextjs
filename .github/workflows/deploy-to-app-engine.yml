@@ -16,9 +16,9 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '18'
-    - name: Use BUCKET_NAME
+    - name: Use GCLOUD_STORAGE_BUCKET
       run: |
-        echo "Using bucket: ${{ secrets.BUCKET_NAME }}"
+        echo "Using bucket: ${{ secrets.GCLOUD_STORAGE_BUCKET }}"
     - name: Set up Cloud SDK
       uses: google-github-actions/setup-gcloud@v0.2.0
       with:

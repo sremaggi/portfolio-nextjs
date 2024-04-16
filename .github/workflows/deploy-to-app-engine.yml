@@ -23,4 +23,4 @@ jobs:
         service_account_key: ${{ secrets.GCP_SA_KEY }}
         export_default_credentials: true
     - name: Deploy to App Engine
-      run: gcloud app deploy --project ${{ secrets.GCP_PROJECT_ID }} --set-env-vars=GCP_STORAGE_BUCKET=${{ secrets.GCP_STORAGE_BUCKET }}
+      run: gcloud app deploy --project ${{ secrets.GCP_PROJECT_ID }} 

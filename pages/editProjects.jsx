@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 
 function AdminPanel() {
-  console.log("ENVV", process.env.GCLOUD_STORAGE_BUCKET)
+  console.log("ENVV", process.env.GCP_STORAGE_BUCKET)
   const [projects, setProjects] = useState([]);
   const [selectedProjectId, setSelectedProjectId] = useState('');
   const [project, setProject] = useState({

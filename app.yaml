@@ -2,7 +2,8 @@ runtime: nodejs18
 
 env: standard
 env_variables:
-  GCP_STORAGE_BUCKET: portfolio-419922.appspot.com
+  GCP_STORAGE_BUCKET: "PLACEHOLDER"
+
 instance_class: F1
 
 automatic_scaling:

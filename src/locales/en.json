@@ -1,0 +1,17 @@
+{
+    "home": {
+        "welcome": "Welcome to my portfolio",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "projects": {
+        "welcome": "Welcome to my projects",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "navbar": {
+        "home": "Home",
+        "projects": "Projects",
+        "contact": "Contact"
+    }
+}

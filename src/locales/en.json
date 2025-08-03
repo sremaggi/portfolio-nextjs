@@ -1,13 +1,8 @@
 {
     "home": {
-        "welcome": "Welcome to my portfolio",
-        "projects": "Projects",
-        "contact": "Contact"
-    },
-    "projects": {
-        "welcome": "Welcome to my projects",
-        "projects": "Projects",
-        "contact": "Contact"
+        "welcome": "Software Engineer",
+        "description": "I’m a developer passionate about building clean, scalable and smart solutions.",
+        "social": "Find me on"
     },
     "navbar": {
         "home": "Home",

@@ -1,13 +1,8 @@
 {
     "home": {
-        "welcome": "Bienvenido a mi portafolio",
-        "projects": "Proyectos",
-        "contact": "Contacto"
-    },
-    "projects": {
-        "welcome": "Bienvenido a mis proyectos",
-        "projects": "Projects",
-        "contact": "Contact"
+        "welcome": "Ingeniero de Software",
+        "description": "Soy Sebastián Remaggi, un desarrollador apasionado por crear soluciones limpias, escalables e inteligentes.",
+        "social": "Encuéntrame en"
     },
     "navbar": {
         "home": "Inicio",

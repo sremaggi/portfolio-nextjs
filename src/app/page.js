@@ -1,6 +1,7 @@
 'use client';
 
 import { useLanguage } from '@/context/LanguageContext';
+import Image from 'next/image';
 import { FaGithub, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
 import { Typewriter } from 'react-simple-typewriter';
 
@@ -10,7 +11,15 @@ export default function HomePage() {
   return (
     <main className="flex flex-col items-center justify-center px-6 py-30 md:py-50 text-center">
 
-
+      {/* Imagen redonda centrada */}
+      <Image
+        src="/img/sremaggi.jpeg"
+        alt="Sebastián Remaggi"
+        width={120}
+        height={120}
+        className="rounded-full mx-auto mb-1 shadow-md"
+        priority
+      />
       <div className="max-w-xl p-6 ">
         <h1 className="text-2xl sm:text-4xl  mb-2 leading-tight">
           Sebastián Remaggi Flores

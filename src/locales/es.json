@@ -4,9 +4,12 @@
         "description": "Soy Sebastián Remaggi, un desarrollador apasionado por crear soluciones limpias, escalables e inteligentes.",
         "social": "Encuéntrame en"
     },
+    "services": {
+        "welcome": "servicios"
+    },
     "navbar": {
         "home": "Inicio",
-        "projects": "Proyectos",
+        "projects": "Servicios",
         "contact": "Contacto"
     }
 }

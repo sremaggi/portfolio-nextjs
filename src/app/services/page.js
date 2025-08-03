@@ -2,12 +2,12 @@
 
 import { useLanguage } from '@/context/LanguageContext';
 
-export default function ProjectsPage() {
+export default function ServicesPage() {
     const { language, translations } = useLanguage();
 
     return (
         <main style={{ padding: '2rem' }}>
-            <h1>{translations.projects.welcome}</h1>
+            <h1>{translations.services.welcome}</h1>
         </main>
     );
 }

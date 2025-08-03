@@ -4,9 +4,12 @@
         "description": "I’m a developer passionate about building clean, scalable and smart solutions.",
         "social": "Find me on"
     },
+    "services": {
+        "welcome": "services"
+    },
     "navbar": {
         "home": "Home",
-        "projects": "Projects",
+        "projects": "Services",
         "contact": "Contact"
     }
 }

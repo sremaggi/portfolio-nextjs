@@ -43,7 +43,7 @@ export default function Navbar() {
                     {/* Navigation Links */}
                     {[
                         { href: '/', label: translations.navbar.home },
-                        { href: '/projects', label: translations.navbar.projects },
+                        { href: '/services', label: translations.navbar.projects },
                         { href: '/contact', label: translations.navbar.contact }
                     ].map((link) => (
                         <Link key={link.href} href={link.href} className="relative group">

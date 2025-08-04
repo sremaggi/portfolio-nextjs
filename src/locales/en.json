@@ -5,7 +5,28 @@
         "social": "Find me on"
     },
     "services": {
-        "welcome": "services"
+        "title": "Services",
+        "subtitle": "Explore our solutions designed to boost your digital presence and scale your business.",
+        "web": "Web Development",
+        "webDesc": "We build modern, fast, and responsive websites tailored to your goals and audience.",
+        "mobile": "Mobile Applications",
+        "mobileDesc": "We develop native and hybrid apps for Android and iOS with a focus on user experience.",
+        "cloud": "Cloud Solutions",
+        "cloudDesc": "We implement scalable cloud architectures to improve efficiency and availability.",
+        "consulting": "Consulting",
+        "consultingDesc": "We help you make strategic tech decisions to drive your business forward.",
+        "ctaMessage": "Ready to take your project to the next level?",
+        "ctaButton": "Contact Me"
+    },
+    "contact": {
+        "title": "Contact Me",
+        "subtitle": "Let's get in touch!",
+        "name": "Your name",
+        "email": "Your email",
+        "message": "Your message",
+        "send": "Send message",
+        "success": "Message sent successfully!",
+        "error": "There was an error sending the message."
     },
     "navbar": {
         "home": "Home",

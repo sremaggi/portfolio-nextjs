@@ -5,7 +5,28 @@
         "social": "Encuéntrame en"
     },
     "services": {
-        "welcome": "servicios"
+        "title": "Servicios",
+        "subtitle": "Descubre nuestras soluciones diseñadas para potenciar tu presencia digital y escalar tu negocio.",
+        "web": "Desarrollo Web",
+        "webDesc": "Creamos sitios web modernos, rápidos y responsivos, adaptados a tus objetivos y audiencia.",
+        "mobile": "Aplicaciones Móviles",
+        "mobileDesc": "Desarrollamos apps nativas e híbridas para Android y iOS, centradas en la experiencia del usuario.",
+        "cloud": "Soluciones en la Nube",
+        "cloudDesc": "Implementamos arquitecturas escalables en la nube para mejorar eficiencia y disponibilidad.",
+        "consulting": "Consultoría",
+        "consultingDesc": "Te ayudamos a tomar decisiones tecnológicas estratégicas para impulsar tu negocio.",
+        "ctaMessage": "¿Listo para llevar tu proyecto al siguiente nivel?",
+        "ctaButton": "Contáctame"
+    },
+    "contact": {
+        "title": "Contáctame",
+        "subtitle": "¡Hablemos!",
+        "name": "Tu nombre",
+        "email": "Tu correo",
+        "message": "Tu mensaje",
+        "send": "Enviar mensaje",
+        "success": "¡Mensaje enviado con éxito!",
+        "error": "Hubo un error al enviar el mensaje."
     },
     "navbar": {
         "home": "Inicio",

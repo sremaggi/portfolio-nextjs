@@ -9,6 +9,7 @@ import {
     HelpingHand
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const icons = {
     web: Code2,
@@ -57,14 +58,16 @@ export default function ServicesPage() {
                     return (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1, duration: 0.4 }}
-                            whileHover={{ scale: 1.03 }}
-                            className="bg-card border border-border p-6 md:p-8 rounded-2xl shadow-md hover:shadow-xl transition-all hover:border-primary group"
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ delay: index * 0.1, duration: 1, ease: 'easeOut' }}
+                            whileHover={{ scale: 1.02 }}
+                            className="bg-card border border-border p-6 md:p-8 rounded-2xl shadow-md hover:shadow-xl transition-all hover:border-primary group transform-gpu"
                         >
+
                             <div className="flex items-center mb-4 space-x-4">
-                                <div className="p-3 md:p-4 rounded-full bg-muted text-[color:var(--hover-color)] shadow group-hover:scale-110 transition-transform">
+                                <div className="p-3 md:p-4 rounded-full bg-muted text-[color:var(--hover-color)] shadow group-hover:scale-110 transition-transform transform-gpu">
                                     <Icon className="w-6 h-6 md:w-8 md:h-8" />
                                 </div>
                                 <h2 className="text-lg md:text-xl font-medium">{service.title}</h2>
@@ -75,14 +78,33 @@ export default function ServicesPage() {
                 })}
             </div>
 
-            <div className="mt-10 text-center">
-                <p className="text-sm md:text-md mb-2 text-muted-foreground">
+            <motion.div
+                className="mt-10 text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, ease: 'easeOut' }}
+            >
+                <p className="text-sm md:text-md  text-muted-foreground">
                     {translations.services.ctaMessage}
                 </p>
-                <button className="px-6 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition">
-                    {translations.services.ctaButton}
-                </button>
-            </div>
-        </main>
+                <motion.button
+
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: 'spring', stiffness: 300 }}
+                    className="px-6 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition"
+                >
+                    <Link key={"/contact"} href={"/contact"} className="relative group">
+                        <span className="group-hover:text-[color:var(--hover-color)] transition-colors duration-200 text-[color:var(--hover-color)] ">
+                            {translations.services.ctaButton}
+                        </span>
+                        <span
+                            className="absolute left-0 bottom-[-2px] w-0 h-[2px] bg-[color:var(--hover-color)] group-hover:w-full transition-all duration-300"
+                        />
+                    </Link>
+
+                </motion.button>
+            </motion.div>
+        </main >
     );
 }

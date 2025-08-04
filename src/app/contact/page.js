@@ -4,6 +4,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import { useTheme } from '@/context/ThemeContext';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 export default function ContactPage() {
     const { translations } = useLanguage();
@@ -16,15 +17,28 @@ export default function ContactPage() {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = async e => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-
+        setStatus('');
+        const currentTime = new Date().toLocaleString();
         try {
-            // Aquí iría tu lógica real para enviar (EmailJS, backend, etc)
-            console.log('Sending message...', form);
+            const result = await emailjs.send(
+                'service_x16288v',
+                'contact_us_template',
+                {
+                    name: form.name,
+                    email: form.email,
+                    message: form.message,
+                    time: currentTime,
+                },
+                'EAS_BQrgqPgK7EHWK'
+            );
+
+            console.log('Email sent:', result.text);
             setStatus('success');
             setForm({ name: '', email: '', message: '' });
-        } catch {
+        } catch (error) {
+            console.error('Email error:', error);
             setStatus('error');
         }
 
@@ -87,7 +101,7 @@ export default function ContactPage() {
                             onChange={handleChange}
                             rows={5}
                             required
-                            className="w-full px-4 py-2 rounded-md border border-neutral-300"
+                            className="w-full px-4 py-2 rounded-md border border-neutral-700"
                         ></textarea>
                     </div>
 

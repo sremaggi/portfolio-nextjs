@@ -75,8 +75,8 @@ export default function HomePage() {
           <div className="flex gap-6 justify-center">
             {[
               { href: 'https://github.com/sremaggi', icon: FaGithub, label: 'GitHub' },
-              { href: 'https://linkedin.com/in/sremaggi', icon: FaLinkedin, label: 'LinkedIn' },
-              { href: 'https://x.com/sremaggi', icon: FaXTwitter, label: 'X (Twitter)' }
+              { href: 'https://www.linkedin.com/in/sebasti%C3%A1n-remaggi-flores-5a558b294/', icon: FaLinkedin, label: 'LinkedIn' },
+              { href: 'https://x.com/sebarf96', icon: FaXTwitter, label: 'X (Twitter)' }
             ].map(({ href, icon: Icon, label }, index) => (
               <motion.a
                 key={label}
